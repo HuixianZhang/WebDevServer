@@ -1,0 +1,65 @@
+.wbdv-sticky-nav-bar {
+    background-color: lightblue;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.container {
+    padding-top: 58px;
+}
+
+.color-red {
+    color:red;
+}
+
+.color-me-red {
+    color: red;
+}
+
+.color-blue {
+    color:blue;
+}
+
+.font-20 {
+    font-size:24px;
+}
+
+.font-10 {
+    font-size:20px;
+}
+
+.font-30 {
+    font-size:40px;
+}
+
+.ms-1 {
+    margin-left: ($spacer * .25) !important;
+}
+
+.color-white {
+    color:white;
+}
+
+.style-1{
+    background-color: Black;color:white;border-style: solid;border-width: 25px;border-color: Black;
+}
+
+.style-2{
+    background-color: DarkGray;color:white;border-style: solid;border-width: 25px;border-color: Black;
+}
+
+.center {
+    text-align: center;
+}
+
+.style-3{
+    background-color: Blue;color:white;border-style: solid;border-width: 25px;border-color: Black;
+}
+.style-4{
+    background-color: Black;color:white;border-style: solid;border-width: 17px;border-color: Black;
+}
+
+.font-5 {
+    font-size:15px;

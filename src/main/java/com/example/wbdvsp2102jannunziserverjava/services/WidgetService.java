@@ -125,36 +125,54 @@ public class WidgetService {
 //        return ws;
     }
 
+//    public Integer deleteWidget(Long id) {
+//        repository.deleteById(id);
+//
+////        int index = -1;
+////        for(int i=0; i<widgets.size(); i++) {
+////            if(widgets.get(i).getId().equals(id)) {
+////                index = i;
+////                widgets.remove(index);
+////                return 1;
+////            }
+////        }
+//        return 1;
+//    }
     public Integer deleteWidget(Long id) {
-        repository.deleteById(id);
-
-//        int index = -1;
-//        for(int i=0; i<widgets.size(); i++) {
-//            if(widgets.get(i).getId().equals(id)) {
-//                index = i;
-//                widgets.remove(index);
-//                return 1;
-//            }
-//        }
-        return 1;
+        try{
+            repository.deleteById(id);
+            return 1;
+        }
+        catch(Exception e){return 0;}
     }
 
+//    public Integer updateWidget(Long id, Widget widget) {
+//        Widget originalWidget = repository.findById(id).get();
+//
+////        originalWidget.setText(widget.getText());
+//        originalWidget = widget;
+//
+//        repository.save(originalWidget);
+//
+//        return 1;
+////        for(int i=0; i<widgets.size(); i++) {
+////            if(widgets.get(i).getId().equals(id)) {
+////                widgets.set(i, widget);
+////                return 1;
+////            }
+////        }
+////        return -1;
+//    }
     public Integer updateWidget(Long id, Widget widget) {
         Widget originalWidget = repository.findById(id).get();
 
-        // TODO: copy all the other fields testing for null
-//        originalWidget.setText(widget.getText());
         originalWidget = widget;
+        try {
+            repository.save(originalWidget);
 
-        repository.save(originalWidget);
+            return 1;
+        }
+        catch(Exception e){return 0;}
 
-        return 1;
-//        for(int i=0; i<widgets.size(); i++) {
-//            if(widgets.get(i).getId().equals(id)) {
-//                widgets.set(i, widget);
-//                return 1;
-//            }
-//        }
-//        return -1;
     }
 }
